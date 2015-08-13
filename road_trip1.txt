@@ -1,0 +1,200 @@
+> symbol - what is it? what is it  used for?
+    Answer: it's the prompt, aka the "console"
+            we place the code after >
+
+-> symbol - What is it? what is it used for?
+    Answer: it's what gets returned from the code
+
+Modulus - returns remainder after division
+  ex: 43 % 10 = 3
+
+Grouping Expressions in JavaScript - PEMDAS
+
+Comparators - True or False
+  ex: > 6 > 4 or is 6 greater than 2
+       -> true or return value is true
+
+Comparators                             Syntax
+              Greater than      ex: > 6    >    4    ->True
+              Less than         ex: > 9    <    5    ->False
+              Equals            ex: > 3    ==   4    ->False
+              Not Equals        ex: > 12   !=   4    ->True
+              Greater or Equal  ex: > 8    >=  -2    ->True
+              Less of Equal     ex: > 10   <-   10   ->True
+What is a String?
+  Answer:
+    How JS stores and processes flat text
+    ex: > "Raindrops on roses"
+                    -> "Raindrops on Roses"
+
+Concatenation - a series of interconected strings and/or numbers
+    ex:"The meaning of life is " + 42
+            -> "The meaning of life is 42"
+    ProTips:* Concatenation adds NO spaces, so we must add our own
+            * Concatenation works with numbers and their expressions, too
+              but expressions get evaluated.
+                ex:> 9 + " and " + 1/2 + "ounces"  VS  > 9 + " and " + "1/2 ounces"
+                             -> "9 and .5 ounces"             -> "9 and 1/2 ounces"
+
+Special Charaters Inside Strings
+    Which character advances to the next "tab stop"
+        Answer:   \t
+            ex:   >"Flight \t921\t\tSeat:\t21C"
+                  -> Flight:  921   Seat:  21C
+
+    How do you add quotation marks within the string without ending the string early?
+        Answer: \" \"
+            ex: > "She asked,\"Where is the bathroom?\""
+               -> "She asked, "There is the bathroom?"
+
+    How do you place a backslash itself in the string to make it visible in the return?
+        Answer: \\
+            ex: > "Origin\\Destination:"
+               -> "Origin\Destination:"
+String Comparisons
+    How do you check for matching strings and alpabetical ordering
+        Answer: == or !=
+            ex:>  "The Wright Brothers" == "The Wright Brothers" ->true
+               >  "The Wright Brothers" == "Super Mario Brother" ->false
+               >  "The Wright Brothers" != "the wright brothers" ->true
+
+    How do you test length of strings? What does this property do?
+        Answer: .length; the .length property tests the length of strings
+            ex: > "floccinaucinihilipilification".length
+               -> 29
+        protip: Spaces and any non-alphabetic characters are counted, too
+            ex: > "One Fish, Two Fish, Red Fish, Blue Fish".length
+               -> 39
+
+Variables - used to store and manage data
+      ex: var trainWhistles = 3
+          var ->  variable keyword - tells browswer to set space aside for actual variable
+          trainWhistles ->  variable name- 
+          = -> assignment operator
+          3 -> value to be stored inside variable trainWhistles
+      SO when we call variable trainWhistles we get the value 3 returned to us
+      ex:
+          >trainWhistles
+                    -> 3
+
+Rules and Regulations for naming variables
+1. var no spaces         [X] not okay, don't use spaces
+2. var 3blindmice        [x] not okay, no digits in front
+3. var scored_is_fine    [O] Okay, but often irritating
+4. var get$              [O] Okay, but don't do it
+5. var $_$               [O] Okay, but stupid
+6. var goodNameHere      [O] Okay, called "camel case", begin w lowercase, later words cap7. var mortalKombat2     [O] Okay, digit is at the end, camel case is used
+
+
+How do you change a Variable's value?
+  Answer:
+    1. determine the variable
+      ex: >var trainWhistles = 3
+    2. Now I want to change that variable
+       Value is already determined so i don't have to write "var" again
+       just change it to the new valuee you want
+      ex: >trainWhistles = 9
+
+How can you use a variable in a string?
+  Answer: It can act as a substitute for they data they point to
+      ex: >trainWhistles = 3
+          >"The newest train has " + trainWhistles + "whistles!"
+         ->"The newest train has 3 whistles!
+
+What is incrementing? decrementing?
+   Answer: incrementing is to DECREASE a variables value by 1
+           decrementing is to INCREASE a variables value by 1
+
+How do you increment a variable? how do you decrement it?
+  Answer:               >trainWhistles = 3
+          Increment ex: >trainWhistles++
+                       ->4
+          Decrement ex: >trainWhistles--
+                       ->2
+
+What can you store in a JS variable?
+  Answer: pretty much anything.
+
+How can you access the length property in a variable name?
+  Answer: .length
+
+      ex: >var longString = "a very long string would be placed here"
+          >longString.length
+         ->39
+
+How can you compare string lengths using the length property
+  Answer: after determining your variables
+          use .length after each variable and compare them with ">"
+      
+      ex:> var longWordOne = "antidisestablishmentarianism"
+         > var longWordTwo = "supercalifragilisticexpialidocious"
+         > longWordOne.length > longWordTwo.length
+        ->false
+
+Each position in a String has a numbered "index". from which value does it begin? Why?
+  Answer: It starts from 0, because it is based on the
+          "distance from the starting character" so the first character would be 0.
+
+Is the length of a string the same amount as the number of indexes? Explain.
+  Answer: No because the index counts from 0, wheras the length counts the exact number of          characters, so there will always be one more than the last index.
+
+
+How do you find a specific character within a string?
+Assume >var sentence = "Antidisestablishmentarianism is fun to say!"
+  Answer:>sentence.charAt() - number value is placed between () to locate index
+
+How do you create a versatile message out of flexible pieces?
+   Answer: Variables help organize data, so.
+       ex: >var trainsOperational = 8
+           >var totalTrains = 12
+           >var operatingSatus = " trains are operational today."
+           >trainsOperational + " out of " + totalTrains + operatingSatus
+          ->"8 out of 12 trains are operational today."
+
+EMEBBING CODE THAT SIGNALS WHICH JS FILE TO USE
+
+what purpose does the <script> tag serve? how do you write it?
+   Answer: it says that we want some JS code executed
+       ex: <script src="trains.js"></script>
+
+what does src mean?
+   Answer: the src signals which file our runnable JS code is in.
+           It's the source of the file we want to run.
+
+What if your src is in a different folder than your .html file?
+  let's say your index.html file is in your root/ foldere.
+  But your trains.js file is in your scripts/ folder, which is inside the root/ folder.
+  How do you retreive it?
+  
+    Answer: <script src="scripts/trains.js"></script>
+   Explain: The syntax says to index.html to 1st: go down to scripts folder to find the
+            trains.js file.
+
+What if the file is distant, in a seperate folder? what do you do then?
+
+    Answer: <script src="../scripts/trains.js"></script>
+   Explain: the ".." syntax indicates to "go up a folder" so it takes the path back to the root folder, and then takes it down to the scripts folder, where our trains.js is found.
+
+SEMICOLONS
+
+We like them
+  They're cool
+
+Why do we use semicolons?
+
+    Answer: They tell the computer where the statement ends.
+            This allows for multiple statements to be made.
+
+What does the consol method do?
+
+    Answer: it outputs the results of code operations in files
+        ex: var totalTrains = 12;
+            var trainsOperational = 8;
+            console.log("There are " + trainsOperational + "running trains.");
+          -> There are 8 running trains
+
+     Extra: console.log() can also return the results of any expression we want printed.
+        ex: >console.log(trainsOperational == totalTrains); 
+           ->false
+
+WHILE LOOPS 
